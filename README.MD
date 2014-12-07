@@ -1,7 +1,8 @@
 Before Playing with this project, execute the following commands:
 
-1. change directory into this project directory
-2. execute sbt to start sbt console
+[1]. change directory into this project directory
+
+[2]. execute sbt to start sbt console
 
 ```
 localhost:playJooq barry$ sbt
@@ -11,14 +12,14 @@ localhost:playJooq barry$ sbt
 [playJooq] $
 ```
 
-3. inside sbt console, execute runMain DBEvolve to generate db tables under jdbc:mysql://localhost:3306/test, which was defined in build.sbt
+[3]. inside sbt console, execute runMain DBEvolve to generate db tables under jdbc:mysql://localhost:3306/test, which was defined in build.sbt
 ```
 [playJooq] $ runMain DBEvolve
 [info] Running DBEvolve
 [success] Total time: 2 s, completed Dec 7, 2014 5:13:54 PM
 ```
 
-4. inside sbt console, execute jooq:codegen to generate JOOQ schema classes, record classes, pojo classes and dao classes as configured in build.sbt
+[4]. inside sbt console, execute jooq:codegen to generate JOOQ schema classes, record classes, pojo classes and dao classes as configured in build.sbt
 
 ```
 [playJooq] $ jooq:codegen
@@ -99,20 +100,16 @@ localhost:playJooq barry$ sbt
 [info]   daos                   : true
 ```
 
-5. inside sbt console, execute run
+[5]. inside sbt console, execute run
 
 ```
 [playJooq] $ run
-
---- (Running the application, auto-reloading is enabled) ---
-
+---(Running the application, auto-reloading is enabled)---
 [info] play - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
-
-(Server started, use Ctrl+D to stop and go back to the console...)
-
+(Server started, use Ctrl+D to stop and go back to the console)
 ```
 
-6. Open web browser, paste and go for http://localhost:9000
+[6]. Open web browser, paste and go for http://localhost:9000
 
 ```
 [info] Compiling 2 Scala sources and 1 Java source to /Users/geek/Workspaces/imadz.net/JOOQ/playJooq/target/scala-2.11/classes...
