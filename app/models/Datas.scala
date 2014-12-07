@@ -25,7 +25,7 @@ object Datas {
   def findById(id: String, tableId: String, orgId: String): Data = DB.withConnection { conn =>
     DSL.using(conn)
     .selectFrom(DATA)
-      .where(DATA.ID.eq(id))
+      .where(DATA.OBJECT_ID.eq(id))
       .and(DATA.TABLE_ID.eq(tableId))
       .and(DATA.ORG_ID.eq(orgId))
       .fetchOne
