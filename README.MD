@@ -74,32 +74,14 @@ localhost:playJooq barry$ sbt
 [info] ARRAYs fetched           : 0 (0 included, 0 excluded)
 [info] Enums fetched            : 0 (0 included, 0 excluded)
 [info] Generating table         : PlayEvolutions.java [input=play_evolutions, output=play_evolutions, pk=KEY_play_evolutions_PRIMARY]
-[info] Generating table         : T1.java [input=t1, output=t1, pk=KEY_t1_PRIMARY]
-[info] Generating table         : Tbl_16charPkUuid.java [input=tbl_16char_pk_uuid, output=tbl_16char_pk_uuid, pk=KEY_tbl_16char_pk_uuid_PRIMARY]
-[info] Generating table         : Tbl_64charPkUuid.java [input=tbl_64char_pk_uuid, output=tbl_64char_pk_uuid, pk=KEY_tbl_64char_pk_uuid_PRIMARY]
-[info] Generating table         : TblAutoPkUuid.java [input=tbl_auto_pk_uuid, output=tbl_auto_pk_uuid, pk=KEY_tbl_auto_pk_uuid_PRIMARY]
-[info] Generating table         : TblBinaryPkUuid.java [input=tbl_binary_pk_uuid, output=tbl_binary_pk_uuid, pk=KEY_tbl_binary_pk_uuid_PRIMARY]
-[info] Generating table         : TblComboPkUuid.java [input=tbl_combo_pk_uuid, output=tbl_combo_pk_uuid, pk=KEY_tbl_combo_pk_uuid_PRIMARY]
 [info] Tables generated         : Total: 538.874ms
 [info] Generating table POJOs
 [info] Generating POJO          : Data.java
 [info] Generating POJO          : PlayEvolutions.java
-[info] Generating POJO          : T1.java
-[info] Generating POJO          : Tbl_16charPkUuid.java
-[info] Generating POJO          : Tbl_64charPkUuid.java
-[info] Generating POJO          : TblAutoPkUuid.java
-[info] Generating POJO          : TblBinaryPkUuid.java
-[info] Generating POJO          : TblComboPkUuid.java
 [info] Table POJOs generated    : Total: 655.573ms, +116.699ms
 [info] Generating DAOs
 [info] Generating DAO           : DataDao.java
 [info] Generating DAO           : PlayEvolutionsDao.java
-[info] Generating DAO           : T1Dao.java
-[info] Generating DAO           : Tbl_16charPkUuidDao.java
-[info] Generating DAO           : Tbl_64charPkUuidDao.java
-[info] Generating DAO           : TblAutoPkUuidDao.java
-[info] Generating DAO           : TblBinaryPkUuidDao.java
-[info] Generating DAO           : TblComboPkUuidDao.java
 [info] Table DAOs generated     : Total: 714.2ms, +58.627ms
 [info] Generating table references
 [info] Table refs generated     : Total: 716.681ms, +2.481ms
@@ -108,12 +90,6 @@ localhost:playJooq barry$ sbt
 [info] Generating table records
 [info] Generating record        : DataRecord.java
 [info] Generating record        : PlayEvolutionsRecord.java
-[info] Generating record        : T1Record.java
-[info] Generating record        : Tbl_16charPkUuidRecord.java
-[info] Generating record        : Tbl_64charPkUuidRecord.java
-[info] Generating record        : TblAutoPkUuidRecord.java
-[info] Generating record        : TblBinaryPkUuidRecord.java
-[info] Generating record        : TblComboPkUuidRecord.java
 [info] Table records generated  : Total: 829.912ms, +107.463ms
 [info] Routines fetched         : 0 (0 included, 0 excluded)
 [info] Packages fetched         : 0 (0 included, 0 excluded)
