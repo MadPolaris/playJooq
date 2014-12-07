@@ -1,0 +1,62 @@
+
+/*----------------------------- Mini Buttons ---------------------------------*/
+.minibutton {
+  cursor: pointer;
+  color: #333;
+  text-shadow: #eee 0 1px 1px;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 11px;
+  padding: 5px 10px 6px;
+  height: 11px;
+  text-align: center;
+  -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2); -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2); -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: 1px solid #b2b2b2; border-top-color: #c9c9c9; border-bottom-color: #9a9a9a;
+  background: url(/assets/images/button_bg.png) repeat-x left top;
+  box-sizing: content-box;
+  float: right;
+  margin:2px;
+}
+  .minibutton:active {
+    border-color: #aaa;
+    box-shadow: 0 1px 2px #e4e4e4; -webkit-box-shadow: 0 1px 2px #e4e4e4; -moz-box-shadow: 0 1px 2px #e4e4e4;
+  }
+  .minibutton::selection {
+    background: transparent;
+  }
+  .minibutton ::-moz-selection {
+    background: transparent;
+  }
+  .minibutton.ok {
+    color: #fff;
+    background-image: url(/assets/images/button_bg_green.gif);
+    border-color: #4ba47c; border-top-color: #53b388; border-bottom-color: #459671;
+    text-shadow: #aaa 0 -1px 0;
+  }
+  .minibutton.dark {
+    border: 0;
+    color: #fff;
+    box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;
+    background-image: url(/assets/images/button_bg_dark.gif);
+    text-shadow: none;
+  }
+.container .jumbotron {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+tr.success {
+  border: 1px solid #ccc;
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+
+}
+
+div.jumbotron {
+  margin-bottom: 0px
+}

@@ -1,0 +1,27 @@
+@import scala.collection.immutable.List
+@import imadz.model.gen.tables.pojos.Data
+
+@(datas: List[Data])
+
+@main("Welcome to PlayJooq Demo") {
+
+<table>
+    <thead>
+    <tr>
+        <th>Organization Id</th>
+        <th>Table Id</th>
+        <th>Object Id</th>
+    </tr>
+    </thead>
+    <tbody>
+    @for(data <- datas) {
+    <tr>
+        <td>@data.getOrgId()</td>
+        <td>@data.getTableId()</td>
+        <td>@data.getId()</td>
+    </tr>
+    }
+    </tbody>
+</table>
+
+}
