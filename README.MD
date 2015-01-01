@@ -52,7 +52,7 @@ model contains 8 documentable templates
 [success] Total time: 6 s, completed Jan 1, 2015 7:17:44 PM
 ```
 
-[2]. change directory into this project directory, execute sbt to start sbt console
+[2]. change directory into playJooq project directory, execute sbt to start sbt console
 
 ```
 localhost:playJooq barry$ sbt
