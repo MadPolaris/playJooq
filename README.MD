@@ -2,7 +2,7 @@ Before Playing with this project, execute the following commands:
 
 [1]. find a directory to download and publish sbt-liquibase-plugin locally
 ```
-localhost:3rd-parties barry$ git clone https://github.com/sbtliquibase/sbt-liquibase-plugin.git
+localhost:3rd-parties barry$ git clone https://github.com/zhongdj/sbt-liquibase-plugin.git
 Cloning into 'sbt-liquibase-plugin'...
 remote: Counting objects: 36, done.
 remote: Total 36 (delta 0), reused 0 (delta 0)
