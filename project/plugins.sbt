@@ -21,3 +21,7 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-mocha" % "1.0.0")
 resolvers += "sean8223 Releases" at "https://github.com/sean8223/repository/raw/master/releases"
 
 addSbtPlugin("sean8223" %% "jooq-sbt-plugin" % "1.4")
+
+resolvers += "sonatype-snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
+
+addSbtPlugin("com.github.sbtliquibase" % "sbt-liquibase-plugin" % "0.1.0-SNAPSHOT")

@@ -12,11 +12,17 @@ localhost:playJooq barry$ sbt
 [playJooq] $
 ```
 
-[3]. inside sbt console, execute runMain DBEvolve to generate db tables under jdbc:mysql://localhost:3306/test, which was defined in build.sbt
+[3]. inside sbt console, execute liquibaseUpdate to generate db tables under jdbc:mysql://localhost:3306/test, which was defined in build.sbt
 ```
-[playJooq] $ runMain DBEvolve
-[info] Running DBEvolve
-[success] Total time: 2 s, completed Dec 7, 2014 5:13:54 PM
+[playJooq] $ liquibaseUpdate
+INFO 1/1/15 6:44 PM: liquibase: Successfully acquired change log lock
+INFO 1/1/15 6:44 PM: liquibase: Creating database history table with name: DATABASECHANGELOG
+INFO 1/1/15 6:44 PM: liquibase: Reading from DATABASECHANGELOG
+INFO 1/1/15 6:44 PM: liquibase: conf/migrations/changelog.xml: conf/migrations/baseline.xml::create wide type table::Barry: Custom SQL executed
+INFO 1/1/15 6:44 PM: liquibase: conf/migrations/changelog.xml: conf/migrations/baseline.xml::create wide type table::Barry: Custom SQL executed
+INFO 1/1/15 6:44 PM: liquibase: conf/migrations/changelog.xml: conf/migrations/baseline.xml::create wide type table::Barry: ChangeSet conf/migrations/baseline.xml::create wide type table::Barry ran successfully in 17ms
+INFO 1/1/15 6:44 PM: liquibase: Successfully released change log lock
+[success] Total time: 0 s, completed Jan 1, 2015 6:44:34 PM
 ```
 
 [4]. inside sbt console, execute jooq:codegen to generate JOOQ schema classes, record classes, pojo classes and dao classes as configured in build.sbt

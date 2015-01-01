@@ -1,10 +1,14 @@
+import com.github.sbtliquibase.SbtLiquibase
+
+import com.github.sbtliquibase.Import._
+
 name := """playJooq"""
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val root = (project in file(".")).enablePlugins(PlayScala).enablePlugins(SbtLiquibase)
 
-scalaVersion := "2.11.1"
+scalaVersion := "2.11.4"
 
 libraryDependencies ++= Seq(
   jdbc,
@@ -12,8 +16,6 @@ libraryDependencies ++= Seq(
   cache,
   ws
 )
-
-seq(jooqSettings: _*)
 
 libraryDependencies ++= Seq(
   jdbc,
@@ -33,6 +35,9 @@ libraryDependencies ++= Seq(
   "com.fasterxml.uuid" % "java-uuid-generator" % "3.1.3"
 ) //map {_.withSources().withJavadoc()}
 
+libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.31" % "jooq"
+
+seq(jooqSettings: _*)
 
 jooqVersion := "3.4.0"
 
@@ -51,5 +56,12 @@ jooqOptions := Seq(
   "generator.generate.generatedAnnotation" -> "true"
 )
 
-libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.31" % "jooq"
+liquibaseChangelog := "conf/migrations/changelog.xml"
 
+liquibaseUsername := "root"
+
+liquibasePassword := "1q2w3e4r5t"
+
+liquibaseDriver   := "com.mysql.jdbc.Driver"
+
+liquibaseUrl      := "jdbc:mysql://localhost:3306/test?createDatabaseIfNotExist=true"
