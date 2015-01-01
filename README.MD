@@ -1,14 +1,64 @@
 Before Playing with this project, execute the following commands:
 
-[1]. change directory into this project directory
+[1]. find a directory to download and publish sbt-liquibase-plugin locally
+```
+localhost:3rd-parties barry$ git clone https://github.com/sbtliquibase/sbt-liquibase-plugin.git
+Cloning into 'sbt-liquibase-plugin'...
+remote: Counting objects: 36, done.
+remote: Total 36 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (36/36), done.
+Checking connectivity... done
+Barrys-MacBook-Pro:3rd-parties geek$ ls
+sbt-liquibase-plugin
+```
 
-[2]. execute sbt to start sbt console
+and then build and publish it.
+
+```
+localhost:3rd-parties barry$ cd sbt-liquibase-plugin/
+localhost:sbt-liquibase-plugin barry$ sbt publishLocal
+[info] Loading global plugins from /Users/barry/.sbt/0.13/plugins
+[info] Loading project definition from /Users/barry/Workspaces/3rd-parties/sbt-liquibase-plugin/project
+[info] Updating {file:/Users/barry/Workspaces/3rd-parties/sbt-liquibase-plugin/project/}sbt-liquibase-plugin-build...
+[info] Resolving org.fusesource.jansi#jansi;1.4 ...
+[info] Done updating.
+[info] Set current project to sbt-liquibase-plugin (in build file:/Users/barry/Workspaces/3rd-parties/sbt-liquibase-plugin/)
+[info] Updating {file:/Users/barry/Workspaces/3rd-parties/sbt-liquibase-plugin/}sbt-liquibase-plugin...
+[info] Packaging /Users/barry/Workspaces/3rd-parties/sbt-liquibase-plugin/target/scala-2.10/sbt-0.13/sbt-liquibase-plugin-0.1.0-SNAPSHOT-sources.jar ...
+[info] Done packaging.
+[info] Wrote /Users/barry/Workspaces/3rd-parties/sbt-liquibase-plugin/target/scala-2.10/sbt-0.13/sbt-liquibase-plugin-0.1.0-SNAPSHOT.pom
+[info] Resolving org.scala-sbt#sbt-launch;0.13.7 ...
+[info] Done updating.
+[info] :: delivering :: com.github.sbtliquibase#sbt-liquibase-plugin;0.1.0-SNAPSHOT :: 0.1.0-SNAPSHOT :: integration :: Thu Jan 01 19:17:39 CST 2015
+[info] 	delivering ivy file to /Users/barry/Workspaces/3rd-parties/sbt-liquibase-plugin/target/scala-2.10/sbt-0.13/ivy-0.1.0-SNAPSHOT.xml
+[info] Compiling 1 Scala source to /Users/barry/Workspaces/3rd-parties/sbt-liquibase-plugin/target/scala-2.10/sbt-0.13/classes...
+[info] Main Scala API documentation to /Users/barry/Workspaces/3rd-parties/sbt-liquibase-plugin/target/scala-2.10/sbt-0.13/api...
+[warn] there were 2 feature warning(s); re-run with -feature for details
+model contains 8 documentable templates
+[warn] one warning found
+[info] Main Scala API documentation successful.
+[info] Packaging /Users/barry/Workspaces/3rd-parties/sbt-liquibase-plugin/target/scala-2.10/sbt-0.13/sbt-liquibase-plugin-0.1.0-SNAPSHOT-javadoc.jar ...
+[info] Done packaging.
+[warn] there were 2 feature warning(s); re-run with -feature for details
+[warn] one warning found
+[warn] No main class detected
+[info] Packaging /Users/barry/Workspaces/3rd-parties/sbt-liquibase-plugin/target/scala-2.10/sbt-0.13/sbt-liquibase-plugin-0.1.0-SNAPSHOT.jar ...
+[info] Done packaging.
+[info] 	published sbt-liquibase-plugin to /Users/barry/.ivy2/local/com.github.sbtliquibase/sbt-liquibase-plugin/scala_2.10/sbt_0.13/0.1.0-SNAPSHOT/poms/sbt-liquibase-plugin.pom
+[info] 	published sbt-liquibase-plugin to /Users/barry/.ivy2/local/com.github.sbtliquibase/sbt-liquibase-plugin/scala_2.10/sbt_0.13/0.1.0-SNAPSHOT/jars/sbt-liquibase-plugin.jar
+[info] 	published sbt-liquibase-plugin to /Users/barry/.ivy2/local/com.github.sbtliquibase/sbt-liquibase-plugin/scala_2.10/sbt_0.13/0.1.0-SNAPSHOT/srcs/sbt-liquibase-plugin-sources.jar
+[info] 	published sbt-liquibase-plugin to /Users/barry/.ivy2/local/com.github.sbtliquibase/sbt-liquibase-plugin/scala_2.10/sbt_0.13/0.1.0-SNAPSHOT/docs/sbt-liquibase-plugin-javadoc.jar
+[info] 	published ivy to /Users/barry/.ivy2/local/com.github.sbtliquibase/sbt-liquibase-plugin/scala_2.10/sbt_0.13/0.1.0-SNAPSHOT/ivys/ivy.xml
+[success] Total time: 6 s, completed Jan 1, 2015 7:17:44 PM
+```
+
+[2]. change directory into this project directory, execute sbt to start sbt console
 
 ```
 localhost:playJooq barry$ sbt
-[info] Loading global plugins from /Users/geek/.sbt/0.13/plugins
-[info] Loading project definition from /Users/geek/Workspaces/imadz.net/JOOQ/playJooq/project
-[info] Set current project to playJooq (in build file:/Users/geek/Workspaces/imadz.net/JOOQ/playJooq/)
+[info] Loading global plugins from /Users/barry/.sbt/0.13/plugins
+[info] Loading project definition from /Users/barry/Workspaces/imadz.net/JOOQ/playJooq/project
+[info] Set current project to playJooq (in build file:/Users/barry/Workspaces/imadz.net/JOOQ/playJooq/)
 [playJooq] $
 ```
 
@@ -38,7 +88,7 @@ INFO 1/1/15 6:44 PM: liquibase: Successfully released change log lock
 [info] ----------------------------------------------------------
 [info]   dialect                : MYSQL
 [info]   URL                    : jdbc:mysql://localhost:3306/test
-[info]   target dir             : /Users/geek/Workspaces/imadz.net/JOOQ/playJooq/target/scala-2.11/src_managed/main/java
+[info]   target dir             : /Users/barry/Workspaces/imadz.net/JOOQ/playJooq/target/scala-2.11/src_managed/main/java
 [info]   target package         : imadz.model.gen
 [info]   includes               : [.*]
 [info]   excludes               : []
@@ -67,7 +117,7 @@ INFO 1/1/15 6:44 PM: liquibase: Successfully released change log lock
 [info]   none
 [info]
 [info] ----------------------------------------------------------
-[info] Emptying                 : /Users/geek/Workspaces/imadz.net/JOOQ/playJooq/target/scala-2.11/src_managed/main/java/imadz/model/gen
+[info] Emptying                 : /Users/barry/Workspaces/imadz.net/JOOQ/playJooq/target/scala-2.11/src_managed/main/java/imadz/model/gen
 [info] Generating schemata      : Total: 1
 [info] Generating schema        : Test.java
 [info] ----------------------------------------------------------
@@ -118,8 +168,8 @@ INFO 1/1/15 6:44 PM: liquibase: Successfully released change log lock
 [6]. Open web browser, paste and go for http://localhost:9000
 
 ```
-[info] Compiling 2 Scala sources and 1 Java source to /Users/geek/Workspaces/imadz.net/JOOQ/playJooq/target/scala-2.11/classes...
-[info] Compiling 2 Scala sources and 1 Java source to /Users/geek/Workspaces/imadz.net/JOOQ/playJooq/target/scala-2.11/classes...
+[info] Compiling 2 Scala sources and 1 Java source to /Users/barry/Workspaces/imadz.net/JOOQ/playJooq/target/scala-2.11/classes...
+[info] Compiling 2 Scala sources and 1 Java source to /Users/barry/Workspaces/imadz.net/JOOQ/playJooq/target/scala-2.11/classes...
 [info] play - database [default] connected at jdbc:mysql://localhost:3306/test
 [info] play - Application started (Dev)
 ```
