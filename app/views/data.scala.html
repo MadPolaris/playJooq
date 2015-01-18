@@ -4,7 +4,10 @@
 @(datas: List[Data])
 
 @main("Welcome to PlayJooq Demo") {
-
+<script type='text/javascript'
+        src='@routes.Assets.at("javascripts/jquery.json.min.js")'></script>
+<script type='text/javascript'
+        src='@routes.Assets.at("javascripts/contact.js")'></script>
 <table class="table table-striped">
     <thead>
     <tr class="row">
@@ -13,18 +16,38 @@
         <th class="col-xs-1">Object Seq</th>
         <th class="col-xs-1">First Name</th>
         <th class="col-xs-1">Last Name</th>
-        <th class="col-xs-5">Email</th>
+        <th class="col-xs-3">Email</th>
+        <th class="col-xs-2">Actions</th>
     </tr>
     </thead>
     <tbody>
     @for(data <- datas) {
-    <tr class="row">
+    <tr id="row_@data.getOrgId()_@data.getTableId()_@data.getObjectId()" class="row">
         <td class="col-xs-2">@data.getOrgId()</td>
         <td class="col-xs-2">@data.getTableId()</td>
         <td class="col-xs-1">@data.getObjectId()</td>
-        <td class="col-xs-1">@data.getCol_1()</td>
-        <td class="col-xs-1">@data.getCol_2()</td>
-        <td class="col-xs-5">@data.getCol_3()</td>
+        <td class="col-xs-1">
+            <label id="firstName_@data.getOrgId()_@data.getTableId()_@data.getObjectId()">
+            @data.getCol_1()
+            </label>
+        </td>
+        <td class="col-xs-1">
+            <label id="lastName_@data.getOrgId()_@data.getTableId()_@data.getObjectId()">
+            @data.getCol_2()
+            </label>
+        </td>
+        <td class="col-xs-3">
+            <label id="email_@data.getOrgId()_@data.getTableId()_@data.getObjectId()">
+            @data.getCol_3()
+            </label>
+        </td>
+        <td class="col-xs-2">
+            <div id="actions_@data.getOrgId()_@data.getTableId()_@data.getObjectId()">
+                <div class="minibutton ok"
+                     onclick="javascript:window.editContact('@data.getOrgId', '@data.getTableId', '@data.getObjectId')">Edit
+                </div>
+            </div>
+        </td>
     </tr>
     }
     </tbody>

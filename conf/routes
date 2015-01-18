@@ -9,3 +9,9 @@
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 GET     /                           controllers.DataController.list
+
+GET     /future                     controllers.DataController.futureList
+
+GET     /connection                 controllers.Application.accept
+
+PUT     /contact                    controllers.DataController.updateJson()
