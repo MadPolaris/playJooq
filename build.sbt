@@ -12,16 +12,11 @@ scalaVersion := "2.11.4"
 
 libraryDependencies ++= Seq(
   jdbc,
-  anorm,
   cache,
   ws
 )
 
 libraryDependencies ++= Seq(
-  jdbc,
-  anorm,
-  //cache,
-  //ws,
   // WebJars pull in client-side web libraries
   "org.webjars" % "bootstrap" % "3.2.0",
   "org.webjars" % "flot" % "0.8.0",
@@ -33,7 +28,7 @@ libraryDependencies ++= Seq(
   "javax.persistence" % "persistence-api" % "1.0.2",
   "javax.validation" % "validation-api" % "1.1.0.Final",
   "com.fasterxml.uuid" % "java-uuid-generator" % "3.1.3"
-) //map {_.withSources().withJavadoc()}
+)
 
 libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.31" % "jooq"
 
