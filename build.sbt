@@ -21,10 +21,10 @@ libraryDependencies ++= Seq(
   "org.webjars" % "bootstrap" % "3.2.0",
   "org.webjars" % "flot" % "0.8.0",
   "mysql" % "mysql-connector-java" % "5.1.31",
-  "org.jooq" % "jooq" % "3.4.0",
-  "org.jooq" % "jooq-meta" % "3.4.0",
-  "org.jooq" % "jooq-scala" % "3.4.0",
-  "org.jooq" % "jooq-codegen" % "3.4.0",
+  "org.jooq" % "jooq" % "3.7.2",
+  "org.jooq" % "jooq-meta" % "3.7.2",
+  "org.jooq" % "jooq-scala" % "3.7.2",
+  "org.jooq" % "jooq-codegen" % "3.7.2",
   "javax.persistence" % "persistence-api" % "1.0.2",
   "javax.validation" % "validation-api" % "1.1.0.Final",
   "com.fasterxml.uuid" % "java-uuid-generator" % "3.1.3"
@@ -34,7 +34,7 @@ libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.31" % "jooq"
 
 seq(jooqSettings: _*)
 
-jooqVersion := "3.4.0"
+jooqVersion := "3.7.2"
 
 jooqOptions := Seq(
   "jdbc.driver" -> "com.mysql.jdbc.Driver",
