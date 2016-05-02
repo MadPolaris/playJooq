@@ -1,6 +1,11 @@
 import com.github.sbtliquibase.SbtLiquibase
-
 import com.github.sbtliquibase.Import._
+import com.typesafe.sbt.packager.docker.Dockerfile
+import com.typesafe.sbt.packager.Keys.dist
+import play.PlayScala
+import sbtdocker.Instructions._
+import sbtdocker._
+import java.io.File
 
 name := """playJooq"""
 
@@ -65,3 +70,21 @@ liquibasePassword := "1q2w3e4r5t"
 liquibaseDriver   := "com.mysql.jdbc.Driver"
 
 liquibaseUrl      := "jdbc:mysql://localhost:3306/test?createDatabaseIfNotExist=true"
+
+enablePlugins(DockerPlugin)
+
+dockerfile in docker := {
+  val zipFile: File = dist.in(Compile, packageBin).value
+  val unzipFolder = file(s"${zipFile.getParentFile.getAbsolutePath}/app")
+  IO.unzip(zipFile, unzipFolder)
+  val targetFolder = new File(unzipFolder, "playjooq-1.0-SNAPSHOT")
+//  IO.gzip(unzipFolder, tarFile)
+  new mutable.Dockerfile {
+    // Base image
+    from("java")
+    // Add the JAR file
+    add(targetFolder, "/app/")
+    // On launch run Java with the classpath and the main class
+    cmd("bash", s"/app/bin/playjooq")
+  }
+}

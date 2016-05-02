@@ -4,7 +4,7 @@ import models.Datas
 import play.api.data.Form
 import play.api.data.Forms._
 import play.api.libs.json.JsValue
-import play.api.mvc.{Result, Action, Controller}
+import play.api.mvc.{Action, Controller, Result}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future

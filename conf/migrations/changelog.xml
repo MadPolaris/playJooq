@@ -2,5 +2,123 @@
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <!--
     <include file="conf/migrations/baseline.xml"/>
+    -->
+    <changeSet author="geek (generated)" id="1425116902587-1" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable catalogName="test" schemaName="test" tableName="data">
+            <column defaultValue="" name="ORG_ID" type="CHAR(18)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="TABLE_ID" type="CHAR(18)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="OBJECT_ID" type="CHAR(18)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="COL_1" type="VARCHAR(200)"/>
+            <column name="COL_2" type="VARCHAR(200)"/>
+            <column name="COL_3" type="VARCHAR(200)"/>
+            <column name="COL_4" type="VARCHAR(200)"/>
+            <column name="COL_5" type="VARCHAR(200)"/>
+            <column name="COL_6" type="VARCHAR(200)"/>
+            <column name="COL_7" type="VARCHAR(200)"/>
+            <column name="COL_8" type="VARCHAR(200)"/>
+            <column name="COL_9" type="VARCHAR(200)"/>
+            <column name="COL_10" type="VARCHAR(200)"/>
+            <column name="COL_11" type="VARCHAR(200)"/>
+            <column name="COL_12" type="VARCHAR(200)"/>
+            <column name="COL_13" type="VARCHAR(200)"/>
+            <column name="COL_14" type="VARCHAR(200)"/>
+            <column name="COL_15" type="VARCHAR(200)"/>
+            <column name="COL_16" type="VARCHAR(200)"/>
+            <column name="COL_17" type="VARCHAR(200)"/>
+            <column name="COL_18" type="VARCHAR(200)"/>
+            <column name="COL_19" type="VARCHAR(200)"/>
+            <column name="COL_20" type="VARCHAR(200)"/>
+            <column name="COL_21" type="VARCHAR(200)"/>
+            <column name="COL_22" type="VARCHAR(200)"/>
+            <column name="COL_23" type="VARCHAR(200)"/>
+            <column name="COL_24" type="VARCHAR(200)"/>
+            <column name="COL_25" type="VARCHAR(200)"/>
+            <column name="COL_26" type="VARCHAR(200)"/>
+            <column name="COL_27" type="VARCHAR(200)"/>
+            <column name="COL_28" type="VARCHAR(200)"/>
+            <column name="COL_29" type="VARCHAR(200)"/>
+            <column name="COL_30" type="VARCHAR(200)"/>
+            <column name="COL_31" type="VARCHAR(200)"/>
+            <column name="COL_32" type="VARCHAR(200)"/>
+            <column name="COL_33" type="VARCHAR(200)"/>
+            <column name="COL_34" type="VARCHAR(200)"/>
+            <column name="COL_35" type="VARCHAR(200)"/>
+            <column name="COL_36" type="VARCHAR(200)"/>
+            <column name="COL_37" type="VARCHAR(200)"/>
+            <column name="COL_38" type="VARCHAR(200)"/>
+            <column name="COL_39" type="VARCHAR(200)"/>
+            <column name="COL_40" type="VARCHAR(200)"/>
+            <column name="COL_41" type="VARCHAR(200)"/>
+            <column name="COL_42" type="VARCHAR(200)"/>
+            <column name="COL_43" type="VARCHAR(200)"/>
+            <column name="COL_44" type="VARCHAR(200)"/>
+            <column name="COL_45" type="VARCHAR(200)"/>
+            <column name="COL_46" type="VARCHAR(200)"/>
+            <column name="COL_47" type="VARCHAR(200)"/>
+            <column name="COL_48" type="VARCHAR(200)"/>
+            <column name="COL_49" type="VARCHAR(200)"/>
+            <column name="COL_50" type="VARCHAR(200)"/>
+            <column name="COL_51" type="VARCHAR(200)"/>
+            <column name="COL_52" type="VARCHAR(200)"/>
+            <column name="COL_53" type="VARCHAR(200)"/>
+            <column name="COL_54" type="VARCHAR(200)"/>
+            <column name="COL_55" type="VARCHAR(200)"/>
+            <column name="COL_56" type="VARCHAR(200)"/>
+            <column name="COL_57" type="VARCHAR(200)"/>
+            <column name="COL_58" type="VARCHAR(200)"/>
+            <column name="COL_59" type="VARCHAR(200)"/>
+            <column name="COL_60" type="VARCHAR(200)"/>
+            <column name="COL_61" type="VARCHAR(200)"/>
+            <column name="COL_62" type="VARCHAR(200)"/>
+            <column name="COL_63" type="VARCHAR(200)"/>
+            <column name="COL_64" type="VARCHAR(200)"/>
+            <column name="COL_65" type="VARCHAR(200)"/>
+            <column name="COL_66" type="VARCHAR(200)"/>
+            <column name="COL_67" type="VARCHAR(200)"/>
+            <column name="COL_68" type="VARCHAR(200)"/>
+            <column name="COL_69" type="VARCHAR(200)"/>
+            <column name="COL_70" type="VARCHAR(200)"/>
+            <column name="COL_71" type="VARCHAR(200)"/>
+            <column name="COL_72" type="VARCHAR(200)"/>
+            <column name="COL_73" type="VARCHAR(200)"/>
+            <column name="COL_74" type="VARCHAR(200)"/>
+            <column name="COL_75" type="VARCHAR(200)"/>
+            <column name="COL_76" type="VARCHAR(200)"/>
+            <column name="COL_77" type="VARCHAR(200)"/>
+            <column name="COL_78" type="VARCHAR(200)"/>
+            <column name="COL_79" type="VARCHAR(200)"/>
+            <column name="COL_80" type="VARCHAR(200)"/>
+            <column name="COL_81" type="VARCHAR(200)"/>
+            <column name="COL_82" type="VARCHAR(200)"/>
+            <column name="COL_83" type="VARCHAR(200)"/>
+            <column name="COL_84" type="VARCHAR(200)"/>
+            <column name="COL_85" type="VARCHAR(200)"/>
+            <column name="COL_86" type="VARCHAR(200)"/>
+            <column name="COL_87" type="VARCHAR(200)"/>
+            <column name="COL_88" type="VARCHAR(200)"/>
+            <column name="COL_89" type="VARCHAR(200)"/>
+            <column name="COL_90" type="VARCHAR(200)"/>
+            <column name="COL_91" type="VARCHAR(200)"/>
+            <column name="COL_92" type="VARCHAR(200)"/>
+            <column name="COL_93" type="VARCHAR(200)"/>
+            <column name="COL_94" type="VARCHAR(200)"/>
+            <column name="COL_95" type="VARCHAR(200)"/>
+            <column name="COL_96" type="VARCHAR(200)"/>
+            <column name="COL_97" type="VARCHAR(200)"/>
+            <column name="COL_98" type="VARCHAR(200)"/>
+            <column name="COL_99" type="VARCHAR(200)"/>
+            <column name="COL_100" type="VARCHAR(200)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="geek (generated)" id="1425116902587-2" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addPrimaryKey catalogName="test" columnNames="ORG_ID, TABLE_ID, OBJECT_ID" constraintName="PRIMARY" schemaName="test" tableName="data"/>
+    </changeSet>
 </databaseChangeLog>

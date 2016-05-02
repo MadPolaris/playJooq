@@ -25,3 +25,5 @@ addSbtPlugin("sean8223" %% "jooq-sbt-plugin" % "1.4")
 resolvers += "sonatype-snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
 
 addSbtPlugin("com.github.sbtliquibase" % "sbt-liquibase-plugin" % "0.1.0-SNAPSHOT")
+
+addSbtPlugin("se.marcuslonnberg" % "sbt-docker" % "1.3.0")
