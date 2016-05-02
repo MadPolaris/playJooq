@@ -39,7 +39,7 @@ jooqVersion := "3.7.2"
 
 jooqOptions := Seq(
   "jdbc.driver" -> "com.mysql.jdbc.Driver",
-  "jdbc.url" -> "jdbc:mysql://localhost:3306/test",
+  "jdbc.url" -> "jdbc:mysql://dbserver:3306/test",
   "jdbc.user" -> "root",
   "jdbc.password" -> "1q2w3e4r5t",
   "generator.database.name" -> "org.jooq.util.mysql.MySQLDatabase",
@@ -60,7 +60,7 @@ liquibasePassword := "1q2w3e4r5t"
 
 liquibaseDriver   := "com.mysql.jdbc.Driver"
 
-liquibaseUrl      := "jdbc:mysql://localhost:3306/test?createDatabaseIfNotExist=true"
+liquibaseUrl      := "jdbc:mysql://dbserver:3306/test?createDatabaseIfNotExist=true"
 
 enablePlugins(DockerP)
 
