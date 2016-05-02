@@ -2,7 +2,6 @@ import com.github.sbtliquibase.SbtLiquibase
 import com.github.sbtliquibase.Import._
 import com.typesafe.sbt.packager.docker.Dockerfile
 import com.typesafe.sbt.packager.Keys.dist
-import play.PlayScala
 import sbtdocker.Instructions._
 import sbtdocker._
 import java.io.File
