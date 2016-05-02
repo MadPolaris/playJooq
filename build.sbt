@@ -1,10 +1,7 @@
-import com.github.sbtliquibase.SbtLiquibase
-import com.github.sbtliquibase.Import._
-import com.typesafe.sbt.packager.docker.Dockerfile
-import com.typesafe.sbt.packager.Keys.dist
-import sbtdocker.Instructions._
+
+import sbtdocker.{DockerPlugin => DockerP}
 import sbtdocker._
-import java.io.File
+import com.typesafe.sbt.packager.Keys.dist
 
 name := """playJooq"""
 
@@ -55,7 +52,7 @@ jooqOptions := Seq(
   "generator.generate.generatedAnnotation" -> "true"
 )
 
-liquibaseChangelog := "conf/migrations/changelog.xml"
+liquibaseChangelog := file ("conf/migrations/changelog.xml")
 
 liquibaseUsername := "root"
 
@@ -65,7 +62,7 @@ liquibaseDriver   := "com.mysql.jdbc.Driver"
 
 liquibaseUrl      := "jdbc:mysql://localhost:3306/test?createDatabaseIfNotExist=true"
 
-enablePlugins(DockerPlugin)
+enablePlugins(DockerP)
 
 dockerfile in docker := {
   val zipFile: File = dist.in(Compile, packageBin).value
