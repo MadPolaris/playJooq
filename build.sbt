@@ -72,7 +72,7 @@ dockerfile in docker := {
 //  IO.gzip(unzipFolder, tarFile)
   new mutable.Dockerfile {
     // Base image
-    from("centos7-oraclejdk1.8.0_65")
+    from("djzhong/jdk8")
     // Add the JAR file
     add(targetFolder, "/app/")
     // On launch run Java with the classpath and the main class
